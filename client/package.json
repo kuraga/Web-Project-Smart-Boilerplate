@@ -1,0 +1,26 @@
+{
+  "name": "zeus-client",
+  "version": "0.0.0",
+
+  "dependencies": {
+    "rotorjs": "^0.3.0",
+    "virtual-dom": "^2.0.1",
+    "vnode-immutable-thunk": "^0.2.0",
+    "whatwg-fetch": "^0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-paths": "^1.0.0",
+    "run-sequence": "^1.1.0",
+    "del": "^1.1.1",
+    "browserify": "^10.1.3",
+    "jsx-transform": "^2.1.0",
+    "babelify": "^6.0.2"
+  },
+
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "clean": "./node_modules/.bin/gulp clean"
+  }
+}

@@ -1,0 +1,16 @@
+require File.join(File.dirname(__FILE__), 'init')
+
+require 'fileutils'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new :test
+
+task :clean do
+  rm_rf ['build']
+end
+
+task :build do
+  FileUtils.mkdir 'build'
+  files_to_copy = %w(application.rb config.ru Gemfile helper.rb init.rb Rakefile .ruby-version)
+  FileUtils.cp_r files_to_copy, 'build'
+end
